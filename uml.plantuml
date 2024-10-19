@@ -1,0 +1,28 @@
+@startuml
+!define RECTANGLE class
+RECTANGLE DiseñoDelSistema {
+    Análisis de Requisitos
+    Cálculos Hidráulicos
+    Elaboración de Diagramas
+}
+
+RECTANGLE AnálisisDeRequisitos {
+    Definición de Parámetros
+    Identificación de Necesidades
+}
+
+RECTANGLE CalculosHidraulicos {
+    Cálculo de Caudales y Presiones
+    Selección de Diámetros de Tubería
+}
+
+RECTANGLE ElaboracionDeDiagramas {
+    Diagrama de Flujo
+    Esquemas de Montaje
+}
+
+DiseñoDelSistema --> AnálisisDeRequisitos
+DiseñoDelSistema --> CalculosHidraulicos
+DiseñoDelSistema --> ElaboracionDeDiagramas
+
+@enduml

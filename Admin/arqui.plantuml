@@ -1,0 +1,20 @@
+@startuml DiagramaDeArquitectura
+package "Cliente" {
+  [Aplicación Web] --> [API REST]
+}
+
+package "Servidor" {
+  [API REST] --> [Controlador de Datos]
+  [Controlador de Datos] --> [Base de Datos]
+}
+
+package "Servicios" {
+  [Base de Datos] --> [Servidor PostgreSQL]
+  [Servidor PostgreSQL] --> [Módulos de Monitoreo]
+}
+
+package "Integración" {
+  [Módulos de Monitoreo] --> [Google Sheets]
+  [Módulos de Monitoreo] --> [Grafana]
+}
+@enduml
